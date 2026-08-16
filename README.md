@@ -7,7 +7,7 @@ CareerAI is an AI-powered career guidance platform that helps students analyze t
 * **Live Website:** https://careerai-snowy.vercel.app/
 * **GitHub Repository:** https://github.com/likithanagesh38-a11y/CareerAI
 * **Backend API:** https://careerai-backend-fb1l.onrender.com
-
+* **Demo Video:** https://www.loom.com/share/c9feff8d4a8046dfa3b0ed2858933f60
 ## ✨ Features
 
 ### 🎯 Career Analyzer
