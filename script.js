@@ -99,7 +99,7 @@ careerForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://localhost:5000/api/analyze",
+                    "https://careerai-backend-fb1l.onrender.com/api/analyze",
                     {
 
                         method: "POST",
@@ -570,7 +570,7 @@ async function generateInterviewQuestion(
 
         const response =
             await fetch(
-                "http://localhost:5000/api/interview-question",
+                "https://careerai-backend-fb1l.onrender.com/api/interview-question",
                 {
 
                     method: "POST",
@@ -739,7 +739,7 @@ async function evaluateAnswer() {
 
         const response =
             await fetch(
-                "http://localhost:5000/api/interview",
+                "https://careerai-backend-fb1l.onrender.com/api/interview",
                 {
 
                     method: "POST",
