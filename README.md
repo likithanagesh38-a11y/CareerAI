@@ -1,232 +1,163 @@
-# CareerAI 🚀
+# ✦ CareerAI — AI-Powered Career Guidance Platform
 
-CareerAI is an AI-powered career guidance web application designed to help students understand their career readiness, identify skill gaps, build a personalized learning roadmap, and practice technical interviews.
+CareerAI is an AI-powered career guidance platform that helps students analyze their career readiness, identify skill gaps, create personalized learning roadmaps, and practice technical interviews.
 
-## 🎯 Problem Statement
+## 🌐 Live Project
 
-Many students are unsure about:
-
-- Which skills are required for their target career
-- Which skills they are currently missing
-- How job-ready they are
-- What they should learn next
-- How to prepare for technical interviews
-
-CareerAI addresses these problems using Artificial Intelligence.
-
-## 💡 Solution
-
-CareerAI analyzes a student's:
-
-- Name
-- Target job role
-- Current skills
-
-The AI then generates:
-
-- Career readiness score
-- Current strengths
-- Skill gaps
-- Recommended skills
-- Personalized 5-step roadmap
-- Career advice
-- Role-specific interview question
-- AI interview evaluation
+* **Live Website:** https://careerai-snowy.vercel.app/
+* **GitHub Repository:** https://github.com/likithanagesh38-a11y/CareerAI
+* **Backend API:** https://careerai-backend-fb1l.onrender.com
 
 ## ✨ Features
 
-### Career Analyzer
+### 🎯 Career Analyzer
 
-Analyzes the student's current skills against their target career.
+* Calculates career readiness score
+* Identifies current strengths
+* Finds skill gaps
+* Recommends skills
+* Generates personalized career advice
 
-### Skill Gap Analysis
+### 🛣️ Personalized Roadmap
 
-Identifies skills that the student needs to improve.
+Generates exactly 5 learning steps based on the user's target role and current skills.
 
-### AI Career Score
+### 🧠 Skill Gap Analysis
 
-Generates a career readiness score from 0–100.
+Identifies the skills required for the selected career that the student needs to improve.
 
-### Personalized Roadmap
+### 🤖 AI Interview Question Generator
 
-Generates exactly five learning steps based on the student's target role and skill gaps.
+Generates interview questions based on the target job role and current skills.
 
-### AI Interview Coach
+### 🎤 AI Interview Coach
 
-Generates role-specific interview questions.
+Evaluates interview answers and provides:
 
-### AI Answer Evaluation
-
-Evaluates the student's interview answer and provides:
-
-- Score out of 10
-- Strengths
-- Improvements
-- Better answer
+* Score out of 10
+* Strengths
+* Improvements
+* Better answer
 
 ## 🛠️ Technologies Used
 
 ### Frontend
 
-- HTML5
-- CSS3
-- JavaScript
-- Fetch API
+* HTML
+* CSS
+* JavaScript
 
 ### Backend
 
-- Node.js
-- Express.js
-- CORS
-- dotenv
+* Node.js
+* Express.js
+* CORS
+* dotenv
 
-### Artificial Intelligence
+### AI
 
-- Google Gemini API
-- @google/genai
+* Google Gemini API
 
-## 🏗️ Project Structure
+### Deployment
 
+* Vercel — Frontend
+* Render — Backend
+* GitHub — Source Code
+
+## 🏗️ Architecture
+
+```text
+User
+ ↓
+Vercel Frontend
+ ↓
+Node.js + Express Backend
+ ↓
+Google Gemini AI
+ ↓
+Personalized Career Results
+```
+
+## 📂 Project Structure
+
+```text
 CareerAI/
-
+│
 ├── api/
-
 │   └── server.js
-
+│
 ├── index.html
-
 ├── style.css
-
 ├── script.js
-
 ├── package.json
-
-├── .env
-
-├── .gitignore
-
+├── package-lock.json
 └── README.md
+```
 
-## 🔄 Application Workflow
+## ⚙️ API Endpoints
 
-1. Student enters name, target role and skills.
-2. Frontend sends the information to the backend.
-3. Backend sends the profile to Gemini AI.
-4. Gemini analyzes the student's career profile.
-5. Backend returns structured JSON.
-6. Frontend displays the career analysis.
-7. Backend generates a role-specific interview question.
-8. Student submits an interview answer.
-9. Backend sends the answer to Gemini.
-10. Gemini evaluates the answer.
-11. Frontend displays interview feedback.
+| Method | Endpoint                  | Purpose                     |
+| ------ | ------------------------- | --------------------------- |
+| POST   | `/api/analyze`            | Career analysis             |
+| POST   | `/api/interview-question` | Generate interview question |
+| POST   | `/api/interview`          | Evaluate interview answer   |
+| GET    | `/`                       | Backend health check        |
 
-## 🔌 API Endpoints
-
-### Career Analysis
-
-POST
-
-/api/analyze
-
-Request:
-
-{
-  "name": "Student Name",
-  "role": "Data Analyst",
-  "skills": "Python, SQL, Excel"
-}
-
-### Interview Question
-
-POST
-
-/api/interview-question
-
-Request:
-
-{
-  "role": "Data Analyst",
-  "skills": "Python, SQL, Excel"
-}
-
-### Interview Evaluation
-
-POST
-
-/api/interview
-
-Request:
-
-{
-  "role": "Data Analyst",
-  "question": "Interview question",
-  "answer": "Student answer"
-}
-
-### Health Check
-
-GET
-
-/
-
-## ⚙️ Installation
-
-Clone the repository:
-
-git clone YOUR_GITHUB_REPOSITORY_URL
-
-Navigate to the project:
-
-cd CareerAI
-
-Install dependencies:
-
-npm install
+## 🔐 Environment Variable
 
 Create a `.env` file:
 
-GEMINI_API_KEY=your_api_key_here
+```env
+GEMINI_API_KEY=your_gemini_api_key
+```
 
-Start the backend:
+Never upload your API key to GitHub.
 
-node api/server.js
+## 💻 Run Locally
+
+```bash
+git clone https://github.com/likithanagesh38-a11y/CareerAI.git
+cd CareerAI
+npm install
+npm start
+```
 
 The backend runs on:
 
+```text
 http://localhost:5000
+```
 
-Open the frontend using a local development server.
+Open `index.html` using a local development server.
 
-## 🔐 Environment Variables
+## 🔄 How It Works
 
-The project uses:
+1. User enters their career information.
+2. Frontend sends the information to the backend.
+3. Backend sends a structured prompt to Gemini AI.
+4. Gemini generates personalized results.
+5. Backend validates the response.
+6. Frontend displays the career analysis and interview guidance.
 
-GEMINI_API_KEY
+## 🔮 Future Enhancements
 
-The API key must never be uploaded to GitHub.
+* User authentication
+* Resume analysis
+* Job recommendations
+* Progress tracking
+* Interview history
+* Course recommendations
+* Career dashboard
+* LinkedIn profile analysis
 
-## 🚀 Future Improvements
+## 👩‍💻 Developer
 
-- User authentication
-- Database integration
-- Resume analysis
-- Job recommendation system
-- LinkedIn profile analysis
-- Voice-based interview practice
-- Interview history
-- Progress tracking
-- Skill learning resources
-- Deployment with production environment variables
+**Likitha Nagesh Moger**
 
-## 👩‍💻 Author
+Computer Science and Engineering Student
 
-Likitha Nagesh Moger
+## 📜 License
 
-BE Computer Science and Engineering
+This project is developed for educational and academic purposes.
 
-CareerAI – AI-powered career guidance platform
-
-## 📄 License
-
-This project is created for educational and project demonstration purposes.
+© 2026 CareerAI
