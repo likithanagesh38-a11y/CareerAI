@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerAI - AI Career Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <span>✦</span> CareerAI
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#analyzer">Career Analyzer</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#interview">Interview Coach</a>
+        </nav>
+
+        <button class="nav-btn" onclick="scrollToAnalyzer()">
+            Get Started
+        </button>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                ✨ AI-Powered Career Guidance
+            </div>
+
+            <h1>
+                Build Your
+                <span>Future With AI</span>
+            </h1>
+
+            <p>
+                Discover your career readiness, identify skill gaps,
+                create a personalized learning roadmap and prepare
+                for interviews with AI.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="scrollToAnalyzer()">
+                    Analyze My Career →
+                </button>
+
+                <button class="secondary-btn" onclick="scrollToFeatures()">
+                    Explore Features
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- Hero Card -->
+        <!-- Hero Card -->
+<div class="hero-card" id="heroCard">
+
+    <div class="card-header">
+        <div>
+            <small>YOUR CAREER PROFILE</small>
+            <h2 id="heroRole">AI Career</h2>
+        </div>
+
+        <div class="score-icon">
+            ✦
+        </div>
+    </div>
+
+    <div class="hero-skills-section">
+
+        <h4>✓ YOUR CURRENT SKILLS</h4>
+
+        <div id="heroCurrentSkills" class="skills-preview">
+            <div>
+                Analyze your profile to see your skills
+            </div>
+        </div>
+
+        <h4 class="needed-title">⚠ SKILLS TO IMPROVE</h4>
+
+        <div id="heroNeededSkills" class="skills-preview">
+            <div>
+                Your AI recommendations will appear here
+            </div>
+        </div>
+
+    </div>
+
+</div>
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section id="features" class="features">
+
+        <div class="section-title">
+            <span>WHAT CAREERAI OFFERS</span>
+
+            <h2>
+                Everything You Need
+                <br>
+                To Move Forward
+            </h2>
+
+            <p>
+                AI-powered tools designed to help students
+                become career-ready.
+            </p>
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+
+                <h3>Career Analysis</h3>
+
+                <p>
+                    Analyze your current skills and discover
+                    how ready you are for your target career.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+
+                <h3>Skill Gap Analysis</h3>
+
+                <p>
+                    Identify the skills you need to improve
+                    for your desired job role.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+
+                <h3>AI Roadmap</h3>
+
+                <p>
+                    Get a personalized learning roadmap
+                    based on your career goal.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+
+                <h3>Interview Coach</h3>
+
+                <p>
+                    Practice AI-generated interview questions
+                    and improve your answers.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Career Analyzer -->
+    <section id="analyzer" class="analyzer">
+
+        <div class="section-title">
+            <span>AI CAREER ANALYZER</span>
+
+            <h2>
+                Discover Your Career Readiness
+            </h2>
+
+            <p>
+                Enter your information and let AI analyze
+                your career profile.
+            </p>
+        </div>
+
+
+        <div class="analyzer-container">
+
+            <form id="careerForm">
+
+                <div class="input-group">
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+
+                <div class="input-group">
+                    <label for="role">
+                        Target Job Role
+                    </label>
+
+                    <input
+                        type="text"
+                        id="role"
+                        placeholder="Example: Data Analyst"
+                        required
+                    >
+                </div>
+
+
+                <div class="input-group">
+                    <label for="skills">
+                        Your Skills
+                    </label>
+
+                    <textarea
+                        id="skills"
+                        placeholder="Example: Python, SQL, Excel, HTML, CSS"
+                        required
+                    ></textarea>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn analyze-btn"
+                >
+                    ✨ Analyze My Career
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Results -->
+    <section id="results" class="results hidden">
+
+        <div class="section-title">
+            <span>AI ANALYSIS</span>
+
+            <h2>
+                Your Career Report
+            </h2>
+        </div>
+
+
+        <div class="results-grid">
+
+            <div class="score-card">
+
+                <small>CAREER READINESS</small>
+
+                <div class="big-score" id="careerScore">
+                    --
+                </div>
+
+                <p>
+                    Good progress! Keep improving your skills.
+                </p>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <h3>💪 Your Strengths</h3>
+
+                <ul id="strengths">
+                    <li>Strong technical foundation</li>
+                    <li>Good problem-solving skills</li>
+                    <li>Programming knowledge</li>
+                </ul>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <h3>⚠️ Skill Gaps</h3>
+
+                <ul id="skillGaps">
+                    <li>Advanced SQL</li>
+                    <li>Power BI</li>
+                    <li>Data Visualization</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Personalized Roadmap -->
+<section id="roadmap" class="roadmap">
+
+    <div class="section-title">
+
+        <span>PERSONALIZED ROADMAP</span>
+
+        <h2>
+            Your Path To Success
+        </h2>
+
+    </div>
+
+    <div
+        id="personalizedRoadmap"
+        class="roadmap-container"
+    >
+
+        <p>
+            Analyze your career profile to generate
+            your personalized roadmap.
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- Interview Coach -->
+    <section id="interview" class="interview">
+
+        <div class="section-title">
+
+            <span>AI INTERVIEW COACH</span>
+
+            <h2>
+                Practice Before The Real Interview
+            </h2>
+
+            <p>
+                Get AI-generated interview questions
+                based on your target role.
+            </p>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 01
+            </div>
+
+            <h3 id="question">
+    Analyze your career profile to generate an AI interview question.
+</h3>
+
+            <textarea
+                id="answer"
+                placeholder="Write your answer here..."
+            ></textarea>
+
+            <button
+                class="primary-btn"
+                onclick="evaluateAnswer()"
+            >
+                Evaluate My Answer ✨
+            </button>
+            <button
+    id="nextQuestionBtn"
+    class="secondary-btn"
+    onclick="nextInterviewQuestion()"
+    style="display: none;"
+>
+    Next Question →
+</button>
+
+            <div id="feedback" class="feedback hidden">
+                <h4>AI Feedback</h4>
+
+                <p>
+                    Your answer will be evaluated by AI.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            <span>✦</span> CareerAI
+        </div>
+
+        <p>
+            Empowering students to build better careers with AI.
+        </p>
+
+        <p class="copyright">
+            © 2026 CareerAI. Built for Frontend Development using AI 2026.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
